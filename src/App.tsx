@@ -9,9 +9,8 @@ function App() {
     document.cookie =
       "partitionedCookie=withPartition; path=/; Partitioned; Secure; SameSite=None; max-age=3600";
 
-    const allCookies = document.cookie;
-    const parsed = allCookies ? allCookies.split("; ").filter(Boolean) : [];
-    setCookies(parsed);
+    const allCookies = document.cookie.split("; ");
+    setCookies(allCookies);
   }, []);
 
   return (
