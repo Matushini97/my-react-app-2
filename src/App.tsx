@@ -4,7 +4,7 @@ function App() {
   const [cookies, setCookies] = useState<string[]>([]);
 
   useEffect(() => {
-    document.cookie = "regularCookie=usual; path=/; max-age=3600";
+    document.cookie = "crossCookie=withoutPartition; path=/; SameSite=None; Secure";
 
     document.cookie =
       "partitionedCookie=withPartition; path=/; Partitioned; Secure; SameSite=None; max-age=3600";
